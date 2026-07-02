@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body, html {
+        margin: 0; padding: 0;
+        width: 2100px; height: 2970px;
+        background-color: #fdfdfd;
+        overflow: hidden; position: relative;
+    }
+    /* Soft gradient shapes */
+    .shape-circle {
+        position: absolute; top: -100px; right: -200px;
+        width: 1200px; height: 1200px;
+        background: linear-gradient(135deg, #a5b4fc 0%, #c084fc 100%);
+        border-radius: 50%; filter: blur(40px); opacity: 0.6; z-index: 0;
+    }
+    .shape-rect {
+        position: absolute; bottom: -100px; left: -100px;
+        width: 1400px; height: 800px;
+        background: linear-gradient(135deg, #fde047 0%, #fca5a5 100%);
+        border-radius: 100px; filter: blur(40px); opacity: 0.5;
+        transform: rotate(15deg); z-index: 0;
+    }
+    /* Central Content Frame */
+    .content-frame {
+        position: absolute; top: 150px; left: 150px;
+        width: 1800px; height: 2670px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 2px solid rgba(255, 255, 255, 1);
+        border-radius: 40px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        z-index: 1;
+    }
+</style>
+</head>
+<body>
+    <div class="shape-circle"></div>
+    <div class="shape-rect"></div>
+    <div class="content-frame"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body, html {
+        margin: 0; padding: 0;
+        width: 2100px; height: 2970px;
+        background-color: #0f172a; /* Deep slate */
+        overflow: hidden; position: relative;
+        font-family: sans-serif;
+    }
+    /* Blurred background orbs */
+    .orb-blue {
+        position: absolute; top: -5%; left: -10%;
+        width: 1400px; height: 1400px;
+        background: #3b82f6; border-radius: 50%;
+        filter: blur(250px); opacity: 0.4; z-index: 0;
+    }
+    .orb-yellow {
+        position: absolute; bottom: -5%; right: -10%;
+        width: 1400px; height: 1400px;
+        background: #eab308; border-radius: 50%;
+        filter: blur(250px); opacity: 0.3; z-index: 0;
+    }
+    /* Frosted glass frame for your code */
+    .glass-frame {
+        position: absolute; top: 150px; left: 150px;
+        width: 1800px; height: 2670px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        border-radius: 40px;
+        backdrop-filter: blur(10px); /* Glass effect */
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+</style>
+</head>
+<body>
+    <div class="orb-blue"></div>
+    <div class="orb-yellow"></div>
+    <div class="glass-frame"></div>
+</body>
+</html>

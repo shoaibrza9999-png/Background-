@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Quantum Circuit Background</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 1920px;
+        height: 1080px;
+        background-color: #0d0d12;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Dot grid */
+    .grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 30px 30px;
+        z-index: 1;
+    }
+
+    /* Main glow */
+    .center-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1400px;
+        height: 1400px;
+        background: radial-gradient(circle, rgba(0, 255, 255, 0.08) 0%, rgba(13, 13, 18, 0) 70%);
+        border-radius: 50%;
+        filter: blur(50px);
+        z-index: 0;
+    }
+
+    /* Subtle circuit lines */
+    .circuit {
+        position: absolute;
+        border: 2px solid rgba(0, 255, 255, 0.2);
+        border-radius: 10px;
+        z-index: 2;
+    }
+
+    .line-1 { width: 400px; height: 100px; top: 10%; left: 5%; border-right: none; border-bottom: none; }
+    .line-2 { width: 300px; height: 200px; bottom: 5%; right: 10%; border-left: none; border-top: none; }
+    .line-3 { width: 150px; height: 150px; top: 60%; left: 15%; border-left: none; border-bottom: none; border-radius: 50%; }
+
+    /* Small nodes */
+    .node {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: #00ffff;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #00ffff;
+        z-index: 3;
+    }
+    .node-1 { top: 9.5%; left: 4.8%; }
+    .node-2 { bottom: 4.5%; right: 9.8%; }
+</style>
+</head>
+<body>
+    <div class="center-glow"></div>
+    <div class="grid"></div>
+    <div class="circuit line-1"></div>
+    <div class="circuit line-2"></div>
+    <div class="circuit line-3"></div>
+    <div class="node node-1"></div>
+    <div class="node node-2"></div>
+</body>
+</html>

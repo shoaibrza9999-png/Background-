@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Brand Fusion Background</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 1920px;
+        height: 1080px;
+        background-color: #1a1a1d;
+        overflow: hidden;
+        position: relative;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Python Blue Glow */
+    .glow-blue {
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 1000px;
+        height: 1000px;
+        background: radial-gradient(circle, rgba(55, 118, 171, 0.4) 0%, rgba(26, 26, 29, 0) 70%);
+        border-radius: 50%;
+        filter: blur(60px);
+        z-index: 0;
+    }
+
+    /* Python Yellow/Gold Glow */
+    .glow-yellow {
+        position: absolute;
+        bottom: -20%;
+        right: -10%;
+        width: 1200px;
+        height: 1200px;
+        background: radial-gradient(circle, rgba(255, 224, 102, 0.25) 0%, rgba(26, 26, 29, 0) 70%);
+        border-radius: 50%;
+        filter: blur(80px);
+        z-index: 0;
+    }
+
+    /* Minimal geometric shapes */
+    .shape {
+        position: absolute;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.03);
+        z-index: 1;
+    }
+
+    .shape-1 {
+        width: 400px;
+        height: 400px;
+        top: 15%;
+        left: 10%;
+        transform: rotate(15deg);
+    }
+
+    .shape-2 {
+        width: 300px;
+        height: 300px;
+        bottom: 20%;
+        right: 15%;
+        transform: rotate(-10deg);
+    }
+</style>
+</head>
+<body>
+    <div class="glow-blue"></div>
+    <div class="glow-yellow"></div>
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+</body>
+</html>

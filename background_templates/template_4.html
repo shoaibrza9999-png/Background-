@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Matrix Terminal Background</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 1920px;
+        height: 1080px;
+        background-color: black;
+        overflow: hidden;
+        color: #0f0;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+        position: relative;
+    }
+
+    /* Subtle Scanlines */
+    .scanlines {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 255, 0, 0.05) 1px, transparent 1px);
+        background-size: 100% 4px;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    /* Falling text streams */
+    .matrix-stream {
+        position: absolute;
+        top: -500px; /* Start above the screen */
+        white-space: nowrap;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        opacity: 0.15;
+        animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+        to { top: 100%; }
+    }
+
+    /* Create several streams with different speeds and positions */
+    .s1 { left: 5%; animation-duration: 15s; }
+    .s2 { left: 15%; animation-duration: 22s; animation-delay: -5s; }
+    .s3 { left: 25%; animation-duration: 18s; animation-delay: -10s; }
+    .s4 { left: 80%; animation-duration: 20s; animation-delay: -2s; }
+    .s5 { left: 90%; animation-duration: 16s; animation-delay: -7s; }
+
+</style>
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="matrix-stream s1">py_cod_run_0101_sys_init</div>
+    <div class="matrix-stream s2">dev_env_exec_loop_function_cal</div>
+    <div class="matrix-stream s3">var_data_stream_alpha_numeric</div>
+    <div class="matrix-stream s4">network_handshake_secure_con</div>
+    <div class="matrix-stream s5">algorithm_process_complete</div>
+</body>
+</html>

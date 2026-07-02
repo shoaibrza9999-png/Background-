@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDE UI - A4 Portrait</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 2100px;
+        height: 2970px;
+        background-color: #1e1e1e; /* VS Code Dark */
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Top Title Bar */
+    .top-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-color: #252526;
+        border-bottom: 2px solid #333;
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+        z-index: 2;
+    }
+
+    /* Window Control Buttons */
+    .btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+    .btn-close { background-color: #ff5f56; }
+    .btn-min { background-color: #ffbd2e; }
+    .btn-max { background-color: #27c93f; }
+
+    /* Left Activity Bar */
+    .sidebar {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 150px;
+        height: calc(100% - 100px);
+        background-color: #333333;
+        border-right: 2px solid #252526;
+        z-index: 1;
+    }
+
+    /* Subtle grid in the main editor area */
+    .editor-bg {
+        position: absolute;
+        top: 100px;
+        left: 150px;
+        width: calc(100% - 150px);
+        height: calc(100% - 100px);
+        background-image: radial-gradient(rgba(255, 255, 255, 0.03) 2px, transparent 2px);
+        background-size: 40px 40px;
+        z-index: 0;
+    }
+</style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="btn btn-close"></div>
+        <div class="btn btn-min"></div>
+        <div class="btn btn-max"></div>
+    </div>
+    <div class="sidebar"></div>
+    <div class="editor-bg"></div>
+</body>
+</html>

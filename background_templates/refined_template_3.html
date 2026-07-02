@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body, html {
+        margin: 0; padding: 0;
+        width: 2100px; height: 2970px;
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        overflow: hidden; position: relative;
+    }
+    /* App Window */
+    .app-window {
+        position: absolute; top: 150px; left: 150px;
+        width: 1800px; height: 2670px;
+        background-color: #1e1e1e; /* Standard VS Code dark */
+        border-radius: 30px;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+        border: 1px solid rgba(255,255,255,0.05);
+        z-index: 1; overflow: hidden;
+    }
+    /* Mac-style Title Bar */
+    .title-bar {
+        width: 100%; height: 90px;
+        background-color: #252526;
+        display: flex; align-items: center;
+        padding-left: 40px; box-sizing: border-box;
+        border-bottom: 1px solid rgba(0,0,0,0.3);
+    }
+    /* Window Buttons */
+    .dot { width: 24px; height: 24px; border-radius: 50%; margin-right: 16px; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+</style>
+</head>
+<body>
+    <div class="app-window">
+        <div class="title-bar">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+        </div>
+    </div>
+</body>
+</html>

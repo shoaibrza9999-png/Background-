@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deep Aurora - A4 Portrait</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 2100px;
+        height: 2970px;
+        background-color: #0b0f19; /* Deep navy */
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Soft glowing orbs */
+    .orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(200px);
+        opacity: 0.5;
+        z-index: 0;
+    }
+
+    .orb-cyan {
+        width: 1400px;
+        height: 1400px;
+        top: -10%;
+        left: -20%;
+        background: #00f0ff;
+    }
+
+    .orb-magenta {
+        width: 1600px;
+        height: 1600px;
+        bottom: -5%;
+        right: -15%;
+        background: #ff007f;
+    }
+
+    .orb-purple {
+        width: 1200px;
+        height: 1200px;
+        top: 40%;
+        left: 40%;
+        background: #7000ff;
+        opacity: 0.3;
+    }
+
+    /* Subtle noise/texture overlay */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(11, 15, 25, 0.4);
+        z-index: 1;
+    }
+</style>
+</head>
+<body>
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-magenta"></div>
+    <div class="orb orb-purple"></div>
+    <div class="overlay"></div>
+</body>
+</html>

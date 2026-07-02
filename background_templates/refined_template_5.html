@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body, html {
+        margin: 0; padding: 0;
+        width: 2100px; height: 2970px;
+        background-color: #0a0f1c; /* Midnight blue */
+        overflow: hidden; position: relative;
+    }
+    /* Main technical outline */
+    .wireframe-box {
+        position: absolute; top: 120px; left: 120px;
+        width: 1860px; height: 2730px;
+        border: 1px solid rgba(56, 189, 248, 0.3); /* Soft cyan */
+        z-index: 1;
+    }
+    /* Glowing geometric corners */
+    .corner {
+        position: absolute;
+        width: 60px; height: 60px;
+        border: 4px solid #38bdf8;
+        z-index: 2;
+    }
+    .tl { top: -2px; left: -2px; border-right: none; border-bottom: none; box-shadow: -5px -5px 15px rgba(56,189,248,0.4); }
+    .tr { top: -2px; right: -2px; border-left: none; border-bottom: none; box-shadow: 5px -5px 15px rgba(56,189,248,0.4); }
+    .bl { bottom: -2px; left: -2px; border-right: none; border-top: none; box-shadow: -5px 5px 15px rgba(56,189,248,0.4); }
+    .br { bottom: -2px; right: -2px; border-left: none; border-top: none; box-shadow: 5px 5px 15px rgba(56,189,248,0.4); }
+
+    /* Subtle background grid */
+    .bg-grid {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.02) 2px, transparent 2px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.02) 2px, transparent 2px);
+        background-size: 100px 100px; z-index: 0;
+    }
+</style>
+</head>
+<body>
+
+ <div class="bg-grid"></div>
+    <div class="wireframe-box">
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+    </div>
+</body>
+</html>

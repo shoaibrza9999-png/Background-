@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Quantum Circuit - A4 Portrait</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 2100px;
+        height: 2970px;
+        background-color: #0d0d12;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Dot grid */
+    .grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(rgba(0, 255, 255, 0.15) 2px, transparent 2px);
+        background-size: 50px 50px;
+        z-index: 1;
+    }
+
+    /* Main glow */
+    .center-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 2200px;
+        height: 2200px;
+        background: radial-gradient(circle, rgba(0, 255, 255, 0.06) 0%, rgba(13, 13, 18, 0) 70%);
+        border-radius: 50%;
+        filter: blur(60px);
+        z-index: 0;
+    }
+
+    /* Subtle circuit lines */
+    .circuit {
+        position: absolute;
+        border: 3px solid rgba(0, 255, 255, 0.25);
+        border-radius: 15px;
+        z-index: 2;
+    }
+
+    .line-1 { width: 500px; height: 300px; top: 8%; left: 8%; border-right: none; border-bottom: none; }
+    .line-2 { width: 400px; height: 400px; bottom: 8%; right: 8%; border-left: none; border-top: none; }
+
+    /* Small nodes */
+    .node {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background-color: #00ffff;
+        border-radius: 50%;
+        box-shadow: 0 0 15px #00ffff;
+        z-index: 3;
+    }
+    .node-1 { top: 7.7%; left: 7.7%; }
+    .node-2 { bottom: 7.7%; right: 7.7%; }
+</style>
+</head>
+<body>
+    <div class="center-glow"></div>
+    <div class="grid"></div>
+    <div class="circuit line-1"></div>
+    <div class="circuit line-2"></div>
+    <div class="node node-1"></div>
+    <div class="node node-2"></div>
+</body>
+</html>
