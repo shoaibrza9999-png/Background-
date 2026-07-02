@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body, html { margin: 0; padding: 0; width: 2100px; height: 2970px; background-color: #f0f0f0; overflow: hidden; position: relative; }
+    .cube-container { position: absolute; transform: rotateX(60deg) rotateZ(45deg); transform-style: preserve-3d; }
+    .cube { position: absolute; width: 400px; height: 400px; background-color: rgba(52, 152, 219, 0.8); }
+    .cube::before { content: ''; position: absolute; width: 400px; height: 200px; background-color: rgba(41, 128, 185, 0.9); transform: translateY(-200px) rotateX(90deg); transform-origin: bottom; }
+    .cube::after { content: ''; position: absolute; width: 200px; height: 400px; background-color: rgba(31, 97, 141, 1); transform: translateX(400px) rotateY(90deg); transform-origin: left; }
+    .c1 { top: 400px; left: 400px; } .c2 { top: 1200px; left: 800px; transform: scale(0.6); } .c3 { top: 600px; left: 1500px; transform: scale(1.2); }
+</style></head>
+<body><div class="cube-container c1"><div class="cube"></div></div><div class="cube-container c2"><div class="cube"></div></div><div class="cube-container c3"><div class="cube"></div></div></body></html>
