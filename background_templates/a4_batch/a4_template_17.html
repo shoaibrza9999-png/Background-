@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A4 Template 17 - Emerald Night</title>
+<style>
+    body, html {
+        margin: 0; padding: 0;
+        width: 2100px; height: 2970px;
+        background-color: #0f172a;
+        overflow: hidden; position: relative;
+        font-family: sans-serif;
+    }
+    .pattern { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(128, 128, 128, 0.1) 2px, transparent 2px), linear-gradient(90deg, rgba(128, 128, 128, 0.1) 2px, transparent 2px); background-size: 100px 100px; z-index: 0; }
+    /* Blurred background orbs */
+    .orb-1 {
+        position: absolute; top: -5%; left: -10%;
+        width: 1400px; height: 1400px;
+        background: #2dd4bf; border-radius: 50%;
+        filter: blur(250px); opacity: 0.4; z-index: 0;
+    }
+    .orb-2 {
+        position: absolute; bottom: -5%; right: -10%;
+        width: 1400px; height: 1400px;
+        background: #10b981; border-radius: 50%;
+        filter: blur(250px); opacity: 0.3; z-index: 0;
+    }
+    /* Frosted glass frame for code */
+    .glass-frame {
+        position: absolute; top: 150px; left: 150px;
+        width: 1800px; height: 2670px;
+        background: rgba(255,255,255,0.03);
+        border: 2px solid rgba(255,255,255,0.1);
+        border-radius: 40px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    /* Top Bar */
+    .top-bar {
+        position: absolute; top: 150px; left: 150px;
+        width: 1800px; height: 100px;
+        background-color: rgba(255,255,255,0.03);
+        border-bottom: 2px solid rgba(255,255,255,0.1);
+        border-radius: 40px 40px 0 0;
+        display: flex; align-items: center;
+        padding-left: 40px; box-sizing: border-box;
+        z-index: 2;
+    }
+    .dot {
+        width: 24px; height: 24px;
+        border-radius: 50%; margin-right: 16px;
+    }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+</style>
+</head>
+<body>
+    <div class="pattern"></div>
+    <div class="orb-1"></div>
+    <div class="orb-2"></div>
+    <div class="glass-frame"></div>
+    <div class="top-bar">
+        <div class="dot dot-red"></div>
+        <div class="dot dot-yellow"></div>
+        <div class="dot dot-green"></div>
+    </div>
+</body>
+</html>
